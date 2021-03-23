@@ -4,8 +4,6 @@ global.fetch = require("node-fetch");
 const bot = new Client();
 var randomnumber =Math.floor(Math.random()*10)
 
-
-const token ='ODIzMDQ4MTYwODk3MDA3Njg3.YFbJVQ.P4zT9K0L4XlzV_TmER7nJ37kRmM'
 const PREFIX ="!";
 
 
@@ -95,5 +93,5 @@ bot.on('message',async message=>{
       
 
 })
-bot.login(token);
+bot.login(process.env.token);
 
