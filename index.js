@@ -7,8 +7,6 @@ var randomnumber =Math.floor(Math.random()*10)
 const PREFIX ="!";
 
 
-
-
 bot.on('ready',()=>console.log('Bot is online'))
 bot.on('message', message => {
   // If the message is "what is my avatar"
