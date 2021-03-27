@@ -26,7 +26,7 @@ bot.on('message', message => {
       }
     })
       .then(res => res.json())
-      .then(json => message.reply(json.results[1].quote));    
+      .then(json => message.reply(json.results[(Math.floor(Math.random() * 100) + 1)].quote));    
   }
 });
 bot.on('message', async message => {
