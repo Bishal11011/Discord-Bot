@@ -26,7 +26,7 @@ bot.on('message', message => {
       }
     })
       .then(res => res.json())
-      .then(json => message.reply(json.results[0].quote));    
+      .then(json => message.reply(json.results[0].image));    
   }
 });
 bot.on('message', async message => {
