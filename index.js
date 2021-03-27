@@ -20,7 +20,7 @@ bot.on('message', message => {
   // If the message is "what is my avatar"
   if (message.content === 'I miss you') {
     const token = 'YOUR_TOKEN_HERE';
-    fetch('https://api.paperquotes.com/apiv1/quotes/?tags=love&random=random', {
+    fetch('https://api.paperquotes.com/apiv1/quotes/?tags=love&random=random&order=?', {
       headers: {
         Authorization: `token ${process.env.key}`
       }
