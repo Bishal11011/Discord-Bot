@@ -19,18 +19,14 @@ bot.on('message', message => {
 bot.on('message', message => {
   // If the message is "what is my avatar"
   if (message.content === 'I miss you') {
-    $.ajax({ 
-      type : "GET", 
-      url : "https://api.paperquotes.com/apiv1/quotes/", 
-      beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Token {d333bdc29644de7a167fdbe1c8985cbf4c671fbf}');},
-      success : function(result) { 
-          console.log(result.results); 
-      }, 
-      error : function(result) { 
-        //handle the error
-      } 
-    }); 
-       
+    const token = 'YOUR_TOKEN_HERE';
+    fetch('https://api.paperquotes.com/apiv1/quotes/?tags=love,motivation&order=-likes', {
+      headers: {
+        Authorization: `token ${rocess.env.key}`
+      }
+    })
+      .then(res => res.json())
+      .then(json => console.log(json));    
   }
 });
 bot.on('message', async message => {
