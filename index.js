@@ -22,7 +22,7 @@ bot.on('message', message => {
     const token = 'YOUR_TOKEN_HERE';
     fetch('https://api.paperquotes.com/apiv1/quotes/?tags=love,motivation&order=-likes', {
       headers: {
-        Authorization: `token ${rocess.env.key}`
+        Authorization: `token ${process.env.key}`
       }
     })
       .then(res => res.json())
