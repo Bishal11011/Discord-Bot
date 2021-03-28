@@ -17,7 +17,7 @@ bot.on('message', message => {
 });
 bot.on('message', message => {
   // If the message is "what is my avatar"
-  if (message.content === 'I miss you ') {
+  if (message.content === 'imissyou') {
     // Send the user's avatar URL
     message.reply("You are the best thing that has ever happened to me i love you with everything i have , you are  my everything");
   }
