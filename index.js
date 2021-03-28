@@ -16,19 +16,6 @@ bot.on('message', message => {
   }
 });
 
-bot.on('message', message => {
-  // If the message is "what is my avatar"
-  if (message.content === 'I miss you') {
-    const token = 'YOUR_TOKEN_HERE';
-    fetch('https://api.paperquotes.com/apiv1/quotes/?tags=love&random=random&order=?', {
-      headers: {
-        Authorization: `token ${process.env.key}`
-      }
-    })
-      .then(res => res.json())
-      .then(json => message.reply(json.results[0].image));    
-  }
-});
 bot.on('message', async message => {
   // Voice only works in guilds, if the message does not come from a guild,
   // we ignore it
@@ -45,7 +32,7 @@ bot.on('message', async message => {
   }
 });
 
-bot.on('message',async message =>{
+bot.on('message',message =>{
 
   if(message.content==='I miss you'){
     message.content.reply("Mero sani , I am the luckiest person in the world.I love you with all my heart and i wanna give all the happiness in the world")
