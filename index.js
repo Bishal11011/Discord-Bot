@@ -33,7 +33,6 @@ bot.on('message', async message => {
 });
 
 bot.on('message',message =>{
-
   if(message.content==='I miss you'){
     message.content.reply("Mero sani , I am the luckiest person in the world.I love you with all my heart and i wanna give all the happiness in the world")
   }
@@ -80,6 +79,7 @@ bot.on('message',async message=>{
           message.reply("Connect to Voice channel")
         }
         Discord.VoiceChannel.join()
+
       }
       
 
