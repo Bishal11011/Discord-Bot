@@ -15,6 +15,13 @@ bot.on('message', message => {
     message.reply(message.author.displayAvatarURL());
   }
 });
+bot.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === 'I miss you ') {
+    // Send the user's avatar URL
+    message.reply("You are the best thing that has ever happened to me i love you with everything i have , you are  my everything");
+  }
+});
 
 bot.on('message', async message => {
   // Voice only works in guilds, if the message does not come from a guild,
